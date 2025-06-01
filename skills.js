@@ -77,6 +77,30 @@ function atualizarTodasPericias() {
 
     const total = halfLevel + attrMod + proef + otherBonus;
     totalInput.value = total;
+
+    const skillLabel = skillEl.querySelector('.skill-label');
+    let needProef = false; // Flag para indicar se a perícia tem penalidade de armadura
+    
+    if (skillLabel) {
+      const infoSkillImage = skillLabel.querySelector('.info_skill_proef');
+      if (infoSkillImage) {
+        needProef = true; // A perícia possui a imagem 'info_skill'
+      }
+    }
+    // ------------------------------------------------------------------
+
+    // Exemplo de como você poderia usar a flag 'needProef'
+    let finalBonus = bonus;
+    if (needProef && !trained) { // Exemplo: se tem penalidade E é treinada
+      // Aqui você aplicaria a lógica da penalidade, por exemplo, subtraindo um valor
+      // Você precisaria de alguma forma obter o valor da penalidade da armadura
+      // Por agora, vamos apenas demonstrar que a flag funciona.
+      // finalBonus -= valorDaPenalidadeDeArmadura;
+
+      halfInput.value = 0;
+      proefInput.value = 0;
+      totalInput.value = 0;
+    }
   });
 }
 

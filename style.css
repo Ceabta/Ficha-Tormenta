@@ -104,6 +104,7 @@ body {
   border-radius: 6px;
   flex: 1;
   min-width: 160px;
+  
 }
 
 .field label {
@@ -205,6 +206,13 @@ textarea {
     min-width: 130px; /* Aumente este valor conforme o maior nome de perícia (ex: "Adestramento", "Conhecimento", "Investigação") */
     text-shadow: 1px 1px 2px black;
     text-align: left; /* Alinha o texto do label à direita para melhor visualização */
+}
+.info_skill_penality, .info_skill_proef{
+  width: 15px; 
+  height: 15px; 
+  margin-left: -5px;
+  filter: invert(1) drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+  cursor: help;
 }
 
 .skill input[type="number"] {
