@@ -49,15 +49,36 @@ function updateColor() {
       document.querySelectorAll("input, textarea").forEach((el) => {
         if (el.type === "number" && el.getAttribute("id") === "level") {
           el.value = 1;
-        } 
+        }
         else if (el.type === "number" && el.getAttribute("min") === "0") {
           el.value = 0;
         }
         else if (el.type === "number" && el.getAttribute("class") === "tot-hability") {
           el.value = 10;
         }
+        else if (el.type === "checkbox") {
+          el.checked = false; // Desmarca o checkbox
+        }
+        else if (el.type === "number" &&
+          (el.getAttribute("class") === "total-skill" ||
+            el.getAttribute("class") === "half-level" ||
+            el.getAttribute("class") === "proeficiency" ||
+            el.getAttribute("class") === "bonus")) {
+          el.value = 0;
+        }
         else {
           el.value = "";
+        }
+      });
+
+      // Modificação AQUI: Para resetar os selects para a opção pré-selecionada
+      document.querySelectorAll("select").forEach(selectEl => {
+        // Encontra a opção que tem o atributo 'selected' no HTML original
+        const defaultOption = selectEl.querySelector('option[selected]');
+        if (defaultOption) {
+          selectEl.value = defaultOption.value; // Define o valor do select para o valor da opção selected
+        } else {
+          selectEl.selectedIndex = 0; // Caso não haja 'selected', volta para a primeira opção (comportamento padrão)
         }
       });
     }
