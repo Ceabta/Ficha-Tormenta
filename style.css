@@ -34,6 +34,7 @@ body {
   position: relative; /* para o botão absoluto */
 }
 
+
 .line {
   display: flex;
   align-items: flex-end;
@@ -41,14 +42,6 @@ body {
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
-
-.line-hability {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
-
 
 .logo-container {
   position: relative;
@@ -96,6 +89,7 @@ body {
   transition: stroke 0.2s linear;
 }
 
+
 .field {
   display: flex;
   flex-direction: column;
@@ -119,15 +113,8 @@ body {
   max-width: 60px;
 }
 
-input[type="text"],
-input[type="number"],
-textarea {
-  border: 1px solid #999;
-  border-radius: 4px;
-  padding: 4px 6px;
-  font-size: 16px;
-  background-color: white;
-  font-family: 'Tormenta', sans-serif;
+.field.long {
+  max-width: 300px;
 }
 
 .line-hability-wrapper {
@@ -135,6 +122,13 @@ textarea {
   gap: 20px;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+.line-hability-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
 }
 
 .line-hability {
@@ -145,20 +139,39 @@ textarea {
   margin-bottom: 10px;
 }
 
-.line-hability .field {
+.line-hability .field,
+.extra-stats .field {
   min-width: 60px;
   max-width: 100px;
   padding: 5.3px;
   align-items: center;
   height: 110px;
+  z-index: 2;
 }
 
-.line-hability .field input {
+.extra-stats .field.long {
+  max-width: 270px;
+  margin-left: -20px;
+  z-index: 1;
+}
+
+.line-hability .field input, 
+.extra-stats .field input {
   aspect-ratio: 1 / 1;
   height: auto;
   width: 80%;
   text-align: center;
   font-size: 36px;
+}
+
+.extra-stats .field input{
+  margin-top: 10px;
+}
+
+.extra-stats .field.long input{
+  margin-top: 0px;
+  height: 65px;
+  width: 80%;
 }
 
 .line-hability .field .tot-hability{
@@ -171,15 +184,38 @@ textarea {
   position: relative;
 }
 
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+  min-width: 50%;
+}
+
+.extra-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 16px;
+  background-color: white;
+  font-family: 'Tormenta', sans-serif;
+}
+
 /* Perícias */
 .skills-section {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-    margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* reduza se estiver maior */
 }
+
 
 .section-title {
     font-weight: bold;
@@ -189,15 +225,14 @@ textarea {
 }
 
 .skill {
-    display: flex; /* Mantém como flex */
-    align-items: center;
-    gap: 6px;
-    flex-wrap: nowrap; /* Impede que os itens quebrem a linha */
-    background-color: #f0f0f857;
-    padding: 6px;
-    border-radius: 6px;
-    width: 100%; /* Ocupa a largura total disponível */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  background-color: #f0f0f857;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 4px; /* se estiver maior, reduza */
 }
 
 .skill-label {
@@ -215,20 +250,44 @@ textarea {
   cursor: help;
 }
 
+/* Aplica apenas à perícia "Ofício" */
+.oficio-skill {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.label-oficio {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  margin-right: -4px;
+}
+
+.input-oficio {
+  margin-top: 2px;
+  font-size: 14px;
+  padding: 3px 6px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: 'Tormenta', sans-serif;
+  width: 80%;
+  max-width: 120px;
+}
+
 .skill input[type="number"] {
-    width: 60px; /* Largura fixa para os inputs */
+    width: 60px;
     text-align: center;
 }
 
-/* Ajuste para os inputs de total, half-level, proeficiency e bonus */
 .skill .total-skill,
 .skill .half-level,
 .skill .proeficiency,
 .skill .bonus {
-    width: 50px; /* Ajuste se necessário para caber o número */
+    width: 50px;
     flex-shrink: 0; /* Impede que o input encolha */
 }
-
 
 .skill select {
     height: 28px;

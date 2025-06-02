@@ -61,38 +61,62 @@
         </div>
 
         <div class="line-hability-wrapper">
+            <div class="left-column">
+                <div class="line-hability">
+                    <div class="field">
+                        <label>FOR</label>
+                        <input type="number" min="0" value="0" id="mod-FOR" readonly />
+                        <input type="number" value="10" id="tot-FOR" class="tot-hability" />
+                    </div>
+                    <div class="field">
+                        <label>DES</label>
+                        <input type="number" min="0" value="0" id="mod-DES" readonly />
+                        <input type="number" value="10" id="tot-DES" class="tot-hability" />
+                    </div>
+                    <div class="field">
+                        <label>CON</label>
+                        <input type="number" min="0" value="0" id="mod-CON" readonly />
+                        <input type="number" value="10" id="tot-CON" class="tot-hability" />
+                    </div>
+                    <div class="field">
+                        <label>INT</label>
+                        <input type="number" min="0" value="0" id="mod-INT" readonly />
+                        <input type="number" value="10" id="tot-INT" class="tot-hability" />
+                    </div>
+                    <div class="field">
+                        <label>SAB</label>
+                        <input type="number" min="0" value="0" id="mod-SAB" readonly />
+                        <input type="number" value="10" id="tot-SAB" class="tot-hability" />
+                    </div>
+                    <div class="field">
+                        <label>CAR</label>
+                        <input type="number" min="0" value="0" id="mod-CAR" readonly />
+                        <input type="number" value="10" id="tot-CAR" class="tot-hability" />
+                    </div>
+                </div>
 
-            <div class="line-hability">
-                <div class="field">
-                    <label>FOR</label>
-                    <input type="number" min="0" value="0" id="mod-FOR" readonly />
-                    <input type="number" value="10" id="tot-FOR" class="tot-hability" />
+                <div class="extra-stats">
+                    <div class="field">
+                        <input type="number" min="0" value="0" id="Max_HP" class="short" />
+                        <label>Máximo</label>
+                    </div>
+                    <div class="field long">
+                        <label>Pontos de Vida</label>
+                        <input type="number" min="0" value="0" id="HP" class="long" />
+                        <label style="margin-top: 5px;">Atuais</label>
+                    </div>
+                    <span style="margin-right: 15px;"></span>
+                    <div class="field">
+                        <input type="number" min="0" value="0" id="Max_Mana" class="short" />
+                        <label>Máximo</label>
+                    </div>
+                    <div class="field long">
+                        <label>Pontos de Mana</label>
+                        <input type="number" min="0" value="0" id="Mana" class="long" />
+                        <label style="margin-top: 5px;">Atuais</label>
+                    </div>
                 </div>
-                <div class="field">
-                    <label>DES</label>
-                    <input type="number" min="0" value="0" id="mod-DES" readonly />
-                    <input type="number" value="10" id="tot-DES" class="tot-hability" />
-                </div>
-                <div class="field">
-                    <label>CON</label>
-                    <input type="number" min="0" value="0" id="mod-CON" readonly />
-                    <input type="number" value="10" id="tot-CON" class="tot-hability" />
-                </div>
-                <div class="field">
-                    <label>INT</label>
-                    <input type="number" min="0" value="0" id="mod-INT" readonly />
-                    <input type="number" value="10" id="tot-INT" class="tot-hability" />
-                </div>
-                <div class="field">
-                    <label>SAB</label>
-                    <input type="number" min="0" value="0" id="mod-SAB" readonly />
-                    <input type="number" value="10" id="tot-SAB" class="tot-hability" />
-                </div>
-                <div class="field">
-                    <label>CAR</label>
-                    <input type="number" min="0" value="0" id="mod-CAR" readonly />
-                    <input type="number" value="10" id="tot-CAR" class="tot-hability" />
-                </div>
+
             </div>
 
             <div class="skills-section">
@@ -102,7 +126,7 @@
                     <input type="checkbox" id="acrobacia" name="acrobacia">
                     <label for="acrobacia" class="skill-label">
                         Acrobacia
-                        <img src="img/helmet.png" class="info_skill_penality" title="Penalidade de Armadura" >
+                        <img src="img/helmet.png" class="info_skill_penality" title="Penalidade de Armadura">
                     </label>
 
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
@@ -127,7 +151,7 @@
                     <input type="checkbox" id="adestramento" name="adestramento">
                     <label for="adestramento" class="skill-label">
                         Adestramento
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
 
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
@@ -215,7 +239,7 @@
                     <input type="checkbox" id="conhecimento" name="conhecimento">
                     <label for="conhecimento" class="skill-label">
                         Conhecimento
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -323,7 +347,7 @@
                     <input type="checkbox" id="furtividade" name="furtividade">
                     <label for="furtividade" class="skill-label">
                         Furtividade
-                        <img src="img/helmet.png" class="info_skill_penality" title="Penalidade de Armadura" >
+                        <img src="img/helmet.png" class="info_skill_penality" title="Penalidade de Armadura">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -347,7 +371,7 @@
                     <input type="checkbox" id="guerra" name="guerra">
                     <label for="guerra" class="skill-label">
                         Guerra
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -455,7 +479,7 @@
                     <input type="checkbox" id="jogatina" name="jogatina">
                     <label for="jogatina" class="skill-label">
                         Jogatina
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -479,8 +503,8 @@
                     <input type="checkbox" id="ladinagem" name="ladinagem">
                     <label for="ladinagem" class="skill-label">
                         Ladinagem
-                        <img src="img/treinado.png" class="info_skill_penality" title="Somente Treinado" >
-                        <img src="img/helmet.png" class="info_skill_proef" title="Penalidade de Armadura" >
+                        <img src="img/treinado.png" class="info_skill_penality" title="Somente Treinado">
+                        <img src="img/helmet.png" class="info_skill_proef" title="Penalidade de Armadura">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -525,7 +549,7 @@
                     <input type="checkbox" id="misticismo" name="misticismo">
                     <label for="misticismo" class="skill-label">
                         Misticismo
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -549,7 +573,7 @@
                     <input type="checkbox" id="nobreza" name="nobreza">
                     <label for="nobreza" class="skill-label">
                         Nobreza
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -569,13 +593,17 @@
                     <input type="number" class="bonus" value="0" title="Outros">
                 </div>
 
-                <div class="skill">
+                <div class="skill oficio-skill">
                     <input type="checkbox" id="oficio1" name="oficio1">
-                    <label for="oficio1" class="skill-label">Ofício
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
-                        <input type="text" style="width: 80%;" >
-                    </label>
-                    
+
+                    <div class="label-oficio">
+                        <label for="oficio1" class="skill-label">
+                            Ofício
+                            <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
+                        </label>
+                        <input type="text" class="input-oficio" placeholder="(___________)">
+                    </div>
+
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
                     <input type="number" class="half-level" value="0" title="½ Nível" readonly>
@@ -594,13 +622,18 @@
                     <input type="number" class="bonus" value="0" title="Outros">
                 </div>
 
-                <div class="skill">
+
+                <div class="skill oficio-skill">
                     <input type="checkbox" id="oficio2" name="oficio2">
-                    <label for="oficio2" class="skill-label">Ofício
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
-                        <input type="text" style="width: 80%;" >
-                    </label>
-                    
+
+                    <div class="label-oficio">
+                        <label for="oficio2" class="skill-label">
+                            Ofício
+                            <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
+                        </label>
+                        <input type="text" class="input-oficio" placeholder="(___________)">
+                    </div>
+
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
                     <input type="number" class="half-level" value="0" title="½ Nível" readonly>
@@ -644,7 +677,7 @@
                     <input type="checkbox" id="pilotagem" name="pilotagem">
                     <label for="pilotagem" class="skill-label">
                         Pilotagem
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>
@@ -710,7 +743,7 @@
                     <input type="checkbox" id="religiao" name="religiao">
                     <label for="religiao" class="skill-label">
                         Religião
-                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado" >
+                        <img src="img/treinado.png" class="info_skill_proef" title="Somente Treinado">
                     </label>
                     <input type="number" class="total-skill" value="0" title="Total" readonly>
                     <span>=</span>

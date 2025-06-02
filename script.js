@@ -86,6 +86,7 @@ function updateColor() {
   }
 }
 
+
 btn.addEventListener("mousedown", () => {
   startTime = Date.now();
   updateColor();
@@ -98,3 +99,14 @@ function resetColor() {
 
 btn.addEventListener("mouseup", resetColor);
 btn.addEventListener("mouseleave", resetColor);
+
+const deslocamentoInput = document.getElementById("deslocamento");
+
+deslocamentoInput.addEventListener("blur", () => {
+  let valor = deslocamentoInput.value.trim();
+
+  // Só adiciona "m" se ainda não tiver
+  if (valor !== "" && !valor.toLowerCase().endsWith("m")) {
+    deslocamentoInput.value = valor + "m";
+  }
+});
